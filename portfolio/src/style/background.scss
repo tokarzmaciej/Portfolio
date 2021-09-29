@@ -1,0 +1,22 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background: url(background_1024px_up.png);
+    background-color: #030303;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+@media (max-width: 1024px) {
+    body{
+        margin: 0%;
+        padding: 0%;
+        background: url(background_1024px_down.png);
+        background-color: #030303;
+        background-size:contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
