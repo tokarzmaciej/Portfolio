@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import MainWebPage from "./mainPage/MainPage";
+import MainWebPage from "./MainPage/MainPage";
 
 function App() {
   return (
