@@ -1,4 +1,4 @@
-import Navbar from "../Navbars/Navbar";
+import Navbar from "../navbars/Navbar";
 import "bulma/css/bulma.css";
 import { Box } from "@chakra-ui/react";
 
