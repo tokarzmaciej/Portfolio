@@ -8,10 +8,13 @@ import {
   DrawerCloseButton,
   useDisclosure,
   Text,
+  Button,
+  Icon,
 } from "@chakra-ui/react";
 import React from "react";
-import { Static } from "../constants/Menu";
+import { Static } from "../../constants/Menu";
 import LinkInHamburger from "./LinkInHamburger";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 function Hamburger() {
   const size = "full";
@@ -23,13 +26,26 @@ function Hamburger() {
     <nav className="is-size-1">
       <>
         <div onClick={() => handleClick()} key={size} m={4}>
-          <i className="fas fa-bars"></i>
+          <Button
+            width="70px"
+            height="80px"
+            variant="link"
+            _focus={{ borderColor: "#e1292b" }}
+            color="#e1292b"
+          >
+            <Icon
+              as={HamburgerIcon}
+              width="70px"
+              height="80px"
+              stroke="#e1292b"
+              strokeWidth="0.5"
+            ></Icon>
+          </Button>
         </div>
-
         <Drawer onClose={onClose} isOpen={isOpen} size={size}>
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerHeader bg="#030303" mb="1%">
+            <DrawerHeader bg="#030303" mb="30px">
               <DrawerCloseButton
                 color="white"
                 fontSize="1xl"
@@ -55,7 +71,7 @@ function Hamburger() {
               </Text>
             </DrawerHeader>
             <DrawerFooter>
-              <Grid templateRows="repeat(4, 1fr)" mr="-15%" gap="20">
+              <Grid templateRows="repeat(4, 1fr)" mr="-15%" gap="60px">
                 {Static.map((field, key) => (
                   <LinkInHamburger key={key} fieldMenu={field} />
                 ))}

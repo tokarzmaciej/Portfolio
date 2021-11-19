@@ -1,23 +1,17 @@
-import React, { Fragment } from "react";
-import Media from "react-media";
+import React from "react";
 import BigSizePage from "./BigSizePage";
 import SmallSizePage from "./SmallSizePage";
+import { useMediaQuery } from "react-responsive";
 
 function MainPage() {
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1023px)" });
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 1023px)" });
+
   return (
-    <Media
-      queries={{
-        large: "(min-width: 1023px)",
-        other: "(max-width:1023px)",
-      }}
-    >
-      {(matches) => (
-        <Fragment>
-          {matches.large && <BigSizePage />}
-          {matches.other && <SmallSizePage />}
-        </Fragment>
-      )}
-    </Media>
+    <div>
+      {isBigScreen && <BigSizePage />}
+      {isSmallScreen && <SmallSizePage />}
+    </div>
   );
 }
 
