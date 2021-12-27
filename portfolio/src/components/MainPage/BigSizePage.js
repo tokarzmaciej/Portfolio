@@ -11,8 +11,8 @@ function BigSizePage() {
       bgRepeat="no-repeat"
       bgAttachment="fixed"
       bgColor="#030303"
-      width="100vw"
-      height="100vh"
+      minWidth="100vw"
+      minHeight="100vh"
     >
       <Navbar />
     </Box>
