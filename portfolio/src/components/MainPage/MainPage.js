@@ -3,14 +3,14 @@ import BigSizePage from "./BigSizePage";
 import SmallSizePage from "./SmallSizePage";
 import { useMediaQuery } from "react-responsive";
 
-function MainPage() {
+function MainPage({ changeLanguage }) {
   const isBigScreen = useMediaQuery({ query: "(min-width: 1023px)" });
   const isSmallScreen = useMediaQuery({ query: "(max-width: 1023px)" });
 
   return (
     <div>
-      {isBigScreen && <BigSizePage />}
-      {isSmallScreen && <SmallSizePage />}
+      {isBigScreen && <BigSizePage changeLanguage={changeLanguage} />}
+      {isSmallScreen && <SmallSizePage changeLanguage={changeLanguage} />}
     </div>
   );
 }

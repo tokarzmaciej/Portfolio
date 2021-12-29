@@ -2,7 +2,7 @@ import Navbar from "../navbars/Navbar";
 import "bulma/css/bulma.css";
 import { Box } from "@chakra-ui/react";
 
-function BigSizePage() {
+function BigSizePage({ changeLanguage }) {
   return (
     <Box
       bg="url('https://github.com/tokarzmaciej/Portfolio/blob/main/portfolio/src/style/background_1024px_up.png?raw=true')"
@@ -14,7 +14,7 @@ function BigSizePage() {
       minWidth="100vw"
       minHeight="100vh"
     >
-      <Navbar />
+      <Navbar changeLanguage={changeLanguage} />
     </Box>
   );
 }

@@ -1,26 +1,37 @@
-import { Link } from "react-router-dom";
 import React from "react";
 import Hamburger from "./Hamburger";
-import { Static } from "../../constants/Menu";
 import { useMediaQuery } from "react-responsive";
+import Profile from "../profile/Profile";
+import Skills from "../skills/Skills";
+import Projects from "../projects/Projects";
+import Contact from "../contact/Contact";
+import Language from "../language/Language";
 
-function Navbar() {
+function Navbar({ changeLanguage }) {
   const isBigScreen = useMediaQuery({ query: "(min-width: 1023px)" });
   const isSmallScreen = useMediaQuery({ query: "(max-width: 1023px)" });
   return (
     <div className="Navbar">
       {isBigScreen && (
         <nav className="is-size-1">
-          <ul>
-            {Static.map((field, key) => (
-              <li key={key}>
-                <Link to={`/${field}`}>{field}</Link>
-              </li>
-            ))}
+          <Language changeLanguage={changeLanguage} />
+          <ul className="m-0">
+            <li>
+              <Profile />
+            </li>
+            <li>
+              <Skills />
+            </li>
+            <li>
+              <Projects />
+            </li>
+            <li>
+              <Contact />
+            </li>
           </ul>
         </nav>
       )}
-      {isSmallScreen && <Hamburger />}
+      {isSmallScreen && <Hamburger changeLanguage={changeLanguage} />}
     </div>
   );
 }

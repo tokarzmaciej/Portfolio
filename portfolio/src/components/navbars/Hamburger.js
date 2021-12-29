@@ -11,34 +11,24 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-
-// import {
-//   Button,
-//   Drawer,
-//   DrawerCloseButton,
-//   DrawerContent,
-//   DrawerHeader,
-//   DrawerOverlay,
-//   DrawerFooter,
-//   Text,
-//   useDisclosure,
-// } from "@chakra-ui/core";
-
 import React from "react";
-import { Static } from "../../constants/Menu";
 import LinkInHamburger from "./LinkInHamburger";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { useTranslation } from "react-i18next";
+import ProfileSmallSize from "../profile/ProfileSmallSize";
+import Language from "../language/Language";
 
-function Hamburger() {
-  const size = "full";
+function Hamburger({ changeLanguage }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleClick = () => {
     onOpen();
   };
+  const { t } = useTranslation();
   return (
     <nav className="is-size-1">
       <>
-        <div onClick={() => handleClick()} key={size} m={4}>
+        <Language changeLanguage={changeLanguage} />
+        <div onClick={() => handleClick()} key="full" mb="10">
           <Button
             width="60px"
             height="70px"
@@ -55,7 +45,7 @@ function Hamburger() {
             ></Icon>
           </Button>
         </div>
-        <Drawer onClose={onClose} isOpen={isOpen} size={size}>
+        <Drawer onClose={onClose} isOpen={isOpen} size="full">
           <DrawerOverlay>
             <DrawerContent>
               <DrawerBody m="0%" p="0%">
@@ -95,9 +85,30 @@ function Hamburger() {
                   mt="10%"
                   height="auto"
                 >
-                  {Static.map((field, key) => (
-                    <LinkInHamburger key={key} fieldMenu={field} />
-                  ))}
+                  <LinkInHamburger
+                    fieldMenu={t("profile")}
+                    component={(isOpen, onClose) => (
+                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
+                    )}
+                  />
+                  <LinkInHamburger
+                    fieldMenu={t("skills")}
+                    component={(isOpen, onClose) => (
+                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
+                    )}
+                  />
+                  <LinkInHamburger
+                    fieldMenu={t("projects")}
+                    component={(isOpen, onClose) => (
+                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
+                    )}
+                  />
+                  <LinkInHamburger
+                    fieldMenu={t("contact")}
+                    component={(isOpen, onClose) => (
+                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
+                    )}
+                  />
                 </Grid>
               </DrawerBody>
             </DrawerContent>

@@ -10,14 +10,14 @@
         display: inline;
         list-style: none;
         margin-right: 4.5%;
-        a {
+        .link-menu {
           display: inline-block;
           color: #e1292b;
           font-family: "Lato";
           position: relative;
           font-variant: small-caps;
         }
-        a:after {
+        .link-menu:after {
           content: "";
           position: absolute;
           left: 0;
@@ -29,10 +29,10 @@
           transform-origin: bottom right;
           transition: transform 0.2s ease-out;
         }
-        a:hover {
+        .link-menu:hover {
           color: white;
         }
-        a:hover:after {
+        .link-menu:hover:after {
           transform: scaleX(1);
           transform-origin: bottom left;
         }

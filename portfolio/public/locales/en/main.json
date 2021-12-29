@@ -1,0 +1,19 @@
+{
+    "title-summary":"Summary",
+    "content-summary":"Hi, my name is Maciej. Currently, I am studying the third year of <strong>practical computer science</strong> at the University of Gdańsk. In the near future, I would like to start working in the professional IT industry.",
+    "title-studies":"Studies",
+    "content-studies":"During my studies, I had the opportunity to learn many technologies and programming languages. I have learned to create applications both from the <strong> frontend and backend </strong> side. I have worked and work on several projects that I do personally, but some of them also with my colleagues where we work together as a team to achieve the goal.",
+    "title-character":"Character",
+    "content-character":"If someone asked me about my 3 main character traits. I would certainly mention <strong> diligence, patience and openness.</strong> I think these features help me explore the IT world and develop new skills.",
+    "title-hobby":"Hobby",
+    "content-hobby":"In my spare time I like to play and watch sports, especially football and volleyball. I always support the Polish national team. When I have a little more time to rest, I fish in Masurian lakes.",
+    "exit":"Exit",
+    "profile":"Profile",
+    "title-profile":"About me",
+    "skills":"Skills",
+    "title-skills":"My skills",
+    "projects":"Projects",
+    "title-projects":"My projects",
+    "contact":"Contact"
+
+}
