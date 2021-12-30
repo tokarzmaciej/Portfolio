@@ -14,6 +14,12 @@
     "title-skills":"Moje umiejętności",
     "projects":"Projekty",
     "title-projects":"Moje projekty",
-    "contact":"Kontakt"
+    "contact":"Kontakt",
+    "languages":"Języki",
+    "frameworks":"Frameworki",
+    "database":"Bazy Danych",
+    "others":"Inne",
+    "skills-description1":"Im więcej",
+    "skills-description2":"tym więcej czasu pracowałem nad polepszeniem danej umięjętności"
 
 }

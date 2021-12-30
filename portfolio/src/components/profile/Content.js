@@ -2,7 +2,6 @@ import { Text, Box, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
-import photo from "../../style/photo.png";
 function Content() {
   const { t } = useTranslation();
   function Feature({ title, text }) {
@@ -21,7 +20,9 @@ function Content() {
     <>
       <Flex justify="center">
         <Box
-          bg={"url(" + photo + ")"}
+          bg={
+            "url('https://github.com/tokarzmaciej/Portfolio/blob/main/portfolio/src/style/photo.png?raw=true')"
+          }
           width="230px"
           height="290px"
           bgRepeat="no-repeat"

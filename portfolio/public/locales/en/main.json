@@ -14,6 +14,12 @@
     "title-skills":"My skills",
     "projects":"Projects",
     "title-projects":"My projects",
-    "contact":"Contact"
+    "contact":"Contact",
+    "languages":"Languages",
+    "frameworks":"Frameworks",
+    "database":"Database",
+    "others":"Others",
+    "skills-description1":"The more",
+    "skills-description2":"the more time I worked to improve my skills"
 
 }

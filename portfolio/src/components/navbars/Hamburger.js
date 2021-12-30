@@ -17,6 +17,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { useTranslation } from "react-i18next";
 import ProfileSmallSize from "../profile/ProfileSmallSize";
 import Language from "../language/Language";
+import SkillsSmallSize from "../skills/SkillsSmallSize";
 
 function Hamburger({ changeLanguage }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -79,7 +80,7 @@ function Hamburger({ changeLanguage }) {
                 </DrawerHeader>
                 <Grid
                   templateRows="repeat(4, 1fr)"
-                  ml="12%"
+                  ml="10%"
                   gap="1%"
                   mb="10%"
                   mt="10%"
@@ -92,9 +93,13 @@ function Hamburger({ changeLanguage }) {
                     )}
                   />
                   <LinkInHamburger
-                    fieldMenu={t("skills")}
+                    fieldMenu={
+                      t("skills").substring(0, 7).endsWith("t")
+                        ? t("skills").substring(0, 7) + "..."
+                        : t("skills")
+                    }
                     component={(isOpen, onClose) => (
-                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
+                      <SkillsSmallSize isOpen={isOpen} onClose={onClose} />
                     )}
                   />
                   <LinkInHamburger

@@ -10,7 +10,7 @@ function LinkInHamburger({ fieldMenu, component }) {
     <>
       {component(isOpen, onClose)}
       <button onClick={() => handleClick()}>
-        <Box w="80vw" h="20" bg="white">
+        <Box w="90vw" h="20" bg="white">
           <Grid templateColumns="repeat(2, 1fr)" mt="5%">
             <Flex>
               <Text h="20" fontSize="300%" color="#030303">
@@ -18,7 +18,7 @@ function LinkInHamburger({ fieldMenu, component }) {
               </Text>
             </Flex>
             <Flex justify="right" align="center">
-              <Icon as={ArrowRightIcon} w={40} h={50} color="#030303" />
+              <Icon as={ArrowRightIcon} w="40" h="50" color="#030303" />
             </Flex>
           </Grid>
         </Box>

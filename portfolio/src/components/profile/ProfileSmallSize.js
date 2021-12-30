@@ -41,7 +41,11 @@ function ProfileSmallSize({ onClose, isOpen }) {
               />
             </DrawerHeader>
             <Center>
-              <Text color="#e1292b" fontSize="40px">
+              <Text
+                color="#e1292b"
+                fontSize="40px"
+                style={{ fontVariant: "small-caps" }}
+              >
                 {t("title-profile")}
               </Text>
             </Center>

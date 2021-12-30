@@ -23,8 +23,8 @@ function Projects() {
               onClick={closeModalProjects}
             ></button>
             <p
-              className="modal-card-title is-size-2 mt-5"
-              style={{ color: "#e1292b" }}
+              className="modal-card-title is-size-1 mt-5"
+              style={{ color: "#e1292b", fontVariant: "small-caps" }}
             >
               {t("title-projects")}
             </p>
