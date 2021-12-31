@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bulma/css/bulma.css";
 import { useTranslation } from "react-i18next";
+import ContentProjects from "./ContentProjects";
 
 function Projects() {
   const [statusModalMe, setStatusModalProjects] = useState("modal");
@@ -29,7 +30,9 @@ function Projects() {
               {t("title-projects")}
             </p>
           </header>
-          <section className="modal-card-body pr-6 pl-6"></section>
+          <section className="modal-card-body pr-6 pl-6">
+            <ContentProjects />
+          </section>
           <footer className="modal-card-foot is-flex is-justify-content-right">
             <button className="button is-info" onClick={closeModalProjects}>
               {t("exit")}

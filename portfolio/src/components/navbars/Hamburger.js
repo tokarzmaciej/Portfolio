@@ -18,6 +18,7 @@ import { useTranslation } from "react-i18next";
 import ProfileSmallSize from "../profile/ProfileSmallSize";
 import Language from "../language/Language";
 import SkillsSmallSize from "../skills/SkillsSmallSize";
+import ProjectsSmallSize from "../projects/ProjectsSmallSize";
 
 function Hamburger({ changeLanguage }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -105,7 +106,7 @@ function Hamburger({ changeLanguage }) {
                   <LinkInHamburger
                     fieldMenu={t("projects")}
                     component={(isOpen, onClose) => (
-                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
+                      <ProjectsSmallSize isOpen={isOpen} onClose={onClose} />
                     )}
                   />
                   <LinkInHamburger
