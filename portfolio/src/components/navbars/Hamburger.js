@@ -46,7 +46,7 @@ function Hamburger({ changeLanguage }) {
     <ContactSmallSize isOpen={isOpen} onClose={onClose} />
   );
   const skillsValue = t("skills").substring(0, 7).endsWith("t")
-    ? t("skills").substring(0, 7) + "..."
+    ? t("skills").substring(0, 5) + "..."
     : t("skills");
   return (
     <nav className="is-size-1">

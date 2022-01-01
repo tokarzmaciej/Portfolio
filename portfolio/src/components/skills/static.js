@@ -9,19 +9,18 @@ export const languages = [
 export const frameworks = [
   ["React", 5, 0],
   ["Spring", 4, 1],
-  ["Node.js", 4, 1],
   ["Express.js", 3, 2],
 ];
 export const database = [
   ["PostgreSQL", 4, 1],
-  ["MongoDbL", 4, 1],
+  ["MongoDb", 4, 1],
   ["Redis", 3, 2],
   ["Neo4j", 2, 3],
 ];
 export const others = [
   ["Redux", 4, 1],
   ["Sass", 4, 1],
-  ["Chakra UI", 4, 1],
+  ["ChakraUI", 4, 1],
   ["Bulma", 3, 2],
 ];
 

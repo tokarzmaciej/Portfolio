@@ -51,9 +51,9 @@ function Skills() {
             <HStack mr="0%" ml="6%" mt="2%">
               <WrapItem m="0" p="0">
                 <Heading fontSize="21px" ml="65px" color="blue.500">
-                  {t("frameworks")}
+                  {t("others")}
                 </Heading>
-                <ContentSkills data={frameworks} />
+                <ContentSkills data={others} />
               </WrapItem>
               <WrapItem m="0" p="0" pl="40px">
                 <Center>
@@ -76,9 +76,9 @@ function Skills() {
             </HStack>
 
             <Heading fontSize="21px" mt="1%" color="blue.500">
-              {t("others")}
+              {t("frameworks")}
             </Heading>
-            <ContentSkillsReverseColumn data={others} />
+            <ContentSkillsReverseColumn data={frameworks} />
             <Heading fontSize="2xl" color="black.900" mt="5">
               {t("skills-description1")}
               <span style={{ color: "#D69E2E" }}> ★</span>,
