@@ -5,8 +5,8 @@ import "bulma/css/bulma.css";
 
 function ContentContact() {
   const style = {
-    fontSize: "25px",
-    ml: "70px",
+    fontSize: "23px",
+    ml: "30px",
     color: "#030303",
   };
   return (
