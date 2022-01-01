@@ -5,13 +5,12 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerBody,
-  Text,
-  Center,
-  Divider,
 } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Content from "./Content";
+import { drawerStyle } from "../../style/drawer-style";
+import HeadingWithDivider from "../others/HeadingWithDivider";
+import Content from "./ContentProfile";
 
 function ProfileSmallSize({ onClose, isOpen }) {
   const { t } = useTranslation();
@@ -22,40 +21,9 @@ function ProfileSmallSize({ onClose, isOpen }) {
         <DrawerContent>
           <DrawerBody m="0%" p="0%">
             <DrawerHeader>
-              <DrawerCloseButton
-                color="#030303"
-                fontSize="1xl"
-                _focus={{ borderColor: "#030303" }}
-                position="relative"
-                left="96%"
-                top="5%"
-                bg="white"
-                _hover={{
-                  bg: "white",
-                  color: "#030303",
-                }}
-                _active={{
-                  bg: "white",
-                  color: "#030303",
-                }}
-              />
+              <DrawerCloseButton {...drawerStyle} />
             </DrawerHeader>
-            <Center>
-              <Text
-                color="#e1292b"
-                fontSize="40px"
-                style={{ fontVariant: "small-caps" }}
-              >
-                {t("title-profile")}
-              </Text>
-            </Center>
-            <Center>
-              <Divider
-                opacity="1"
-                width="85%"
-                border="1px solid black"
-              ></Divider>
-            </Center>
+            <HeadingWithDivider title={t("title-profile")} />
             <Content />
           </DrawerBody>
         </DrawerContent>

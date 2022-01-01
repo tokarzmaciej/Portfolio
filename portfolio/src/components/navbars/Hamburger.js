@@ -19,6 +19,7 @@ import ProfileSmallSize from "../profile/ProfileSmallSize";
 import Language from "../language/Language";
 import SkillsSmallSize from "../skills/SkillsSmallSize";
 import ProjectsSmallSize from "../projects/ProjectsSmallSize";
+import ContactSmallSize from "../contact/ContactSmallSize";
 
 function Hamburger({ changeLanguage }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,6 +27,27 @@ function Hamburger({ changeLanguage }) {
     onOpen();
   };
   const { t } = useTranslation();
+  const textStyle = {
+    fontFamily: "Segoe Script",
+    color: "white",
+    fontSize: "7xl",
+    align: "center",
+  };
+  const profile = (isOpen, onClose) => (
+    <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
+  );
+  const skills = (isOpen, onClose) => (
+    <SkillsSmallSize isOpen={isOpen} onClose={onClose} />
+  );
+  const projects = (isOpen, onClose) => (
+    <ProjectsSmallSize isOpen={isOpen} onClose={onClose} />
+  );
+  const contact = (isOpen, onClose) => (
+    <ContactSmallSize isOpen={isOpen} onClose={onClose} />
+  );
+  const skillsValue = t("skills").substring(0, 7).endsWith("t")
+    ? t("skills").substring(0, 7) + "..."
+    : t("skills");
   return (
     <nav className="is-size-1">
       <>
@@ -60,22 +82,10 @@ function Hamburger({ changeLanguage }) {
                     left="96%"
                     top="5%"
                   />
-                  <Text
-                    fontFamily="Segoe Script"
-                    color="white"
-                    fontSize="7xl"
-                    align="center"
-                    mt="5%"
-                  >
+                  <Text {...textStyle} mt="5%">
                     Maciej
                   </Text>
-                  <Text
-                    fontFamily="Segoe Script"
-                    color="white"
-                    fontSize="7xl"
-                    align="center"
-                    mb="5%"
-                  >
+                  <Text {...textStyle} mb="5%">
                     Tokarz
                   </Text>
                 </DrawerHeader>
@@ -83,37 +93,21 @@ function Hamburger({ changeLanguage }) {
                   templateRows="repeat(4, 1fr)"
                   ml="10%"
                   gap="1%"
-                  mb="10%"
-                  mt="10%"
+                  my="10%"
                   height="auto"
                 >
                   <LinkInHamburger
                     fieldMenu={t("profile")}
-                    component={(isOpen, onClose) => (
-                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
-                    )}
+                    component={profile}
                   />
-                  <LinkInHamburger
-                    fieldMenu={
-                      t("skills").substring(0, 7).endsWith("t")
-                        ? t("skills").substring(0, 7) + "..."
-                        : t("skills")
-                    }
-                    component={(isOpen, onClose) => (
-                      <SkillsSmallSize isOpen={isOpen} onClose={onClose} />
-                    )}
-                  />
+                  <LinkInHamburger fieldMenu={skillsValue} component={skills} />
                   <LinkInHamburger
                     fieldMenu={t("projects")}
-                    component={(isOpen, onClose) => (
-                      <ProjectsSmallSize isOpen={isOpen} onClose={onClose} />
-                    )}
+                    component={projects}
                   />
                   <LinkInHamburger
                     fieldMenu={t("contact")}
-                    component={(isOpen, onClose) => (
-                      <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
-                    )}
+                    component={contact}
                   />
                 </Grid>
               </DrawerBody>

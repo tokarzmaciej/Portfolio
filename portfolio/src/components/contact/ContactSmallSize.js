@@ -5,16 +5,16 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerBody,
-  Box,
+  Flex,
 } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { drawerStyle } from "../../style/drawer-style";
+import ContentContact from "./ContentContact";
+import "bulma/css/bulma.css";
 import HeadingWithDivider from "../others/HeadingWithDivider";
+import { drawerStyle } from "../../style/drawer-style";
 
-import ContentProjects from "./ContentProjects";
-
-function ProjectsSmallSize({ onClose, isOpen }) {
+function ContactSmallSize({ onClose, isOpen }) {
   const { t } = useTranslation();
   return (
     <Drawer onClose={onClose} isOpen={isOpen} size="full">
@@ -24,14 +24,14 @@ function ProjectsSmallSize({ onClose, isOpen }) {
             <DrawerHeader>
               <DrawerCloseButton {...drawerStyle} />
             </DrawerHeader>
-            <HeadingWithDivider title={t("title-projects")} />
-            <Box my="10%">
-              <ContentProjects />
-            </Box>
+            <HeadingWithDivider title={t("contact")} />
+            <Flex align="center" justify="center" mt="10%">
+              <ContentContact />
+            </Flex>
           </DrawerBody>
         </DrawerContent>
       </DrawerOverlay>
     </Drawer>
   );
 }
-export default ProjectsSmallSize;
+export default ContactSmallSize;

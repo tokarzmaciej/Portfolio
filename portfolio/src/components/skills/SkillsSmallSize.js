@@ -5,9 +5,7 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerBody,
-  Text,
   Center,
-  Divider,
   SimpleGrid,
   Heading,
 } from "@chakra-ui/react";
@@ -26,6 +24,8 @@ import {
 } from "./static";
 import Image from "./Image";
 import ContentSkillsReverseColumn from "./ContentSkillsReverseColumn";
+import HeadingWithDivider from "../others/HeadingWithDivider";
+import { drawerStyle } from "../../style/drawer-style";
 
 function SkillsSmallSize({ onClose, isOpen }) {
   const { t } = useTranslation();
@@ -42,40 +42,9 @@ function SkillsSmallSize({ onClose, isOpen }) {
         <DrawerContent>
           <DrawerBody m="0%" p="0%">
             <DrawerHeader>
-              <DrawerCloseButton
-                color="#030303"
-                fontSize="1xl"
-                _focus={{ borderColor: "#030303" }}
-                position="relative"
-                left="96%"
-                top="5%"
-                bg="white"
-                _hover={{
-                  bg: "white",
-                  color: "#030303",
-                }}
-                _active={{
-                  bg: "white",
-                  color: "#030303",
-                }}
-              />
+              <DrawerCloseButton {...drawerStyle} />
             </DrawerHeader>
-            <Center>
-              <Text
-                color="#e1292b"
-                fontSize="40px"
-                style={{ fontVariant: "small-caps" }}
-              >
-                {t("title-skills")}
-              </Text>
-            </Center>
-            <Center>
-              <Divider
-                opacity="1"
-                width="85%"
-                border="1px solid black"
-              ></Divider>
-            </Center>
+            <HeadingWithDivider title={t("title-skills")} />
             <Heading
               fontSize="2xl"
               color="black.900"

@@ -41,4 +41,10 @@ export const projects = [
       "https://github.com/tokarzmaciej/Portfolio/blob/main/portfolio/src/style/project-seven.png?raw=true",
     nameProject: "Portfolio",
   },
+  {
+    linkToRepo: "https://github.com/tokarzmaciej/blog-spring-mvc",
+    linkToImage:
+      "https://github.com/tokarzmaciej/Portfolio/blob/main/portfolio/src/style/project-eight.png?raw=true",
+    nameProject: "Blog-mvc",
+  },
 ];

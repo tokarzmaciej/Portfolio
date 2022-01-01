@@ -1,11 +1,12 @@
 import Navbar from "../navbars/Navbar";
 import "bulma/css/bulma.css";
 import { Box } from "@chakra-ui/react";
+import { smallBackgroundLink } from "./static";
 
 function SmallSizePage({ changeLanguage }) {
   return (
     <Box
-      bg="url('https://github.com/tokarzmaciej/Portfolio/blob/main/portfolio/src/style/background_1024px_down.png?raw=true')"
+      bg={`url(${smallBackgroundLink})`}
       bgSize="contain"
       bgPosition="center center"
       bgRepeat="no-repeat"

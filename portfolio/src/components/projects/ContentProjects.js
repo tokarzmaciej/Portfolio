@@ -4,7 +4,7 @@ import { projects } from "./static";
 
 function ContentProjects() {
   return (
-    <Wrap justify="center" spacing="40px">
+    <Wrap justify="center" spacing="40px" mx="6px">
       {projects.map(({ linkToImage, linkToRepo, nameProject }, idx) => (
         <WrapItem key={idx}>
           <LinkForProject

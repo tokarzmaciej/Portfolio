@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "bulma/css/bulma.css";
 import { useTranslation } from "react-i18next";
-import Content from "./Content";
+import ContentProfile from "./ContentProfile";
 
 function Profile() {
   const [statusModalMe, setStatusModalProfile] = useState("modal");
@@ -31,7 +31,7 @@ function Profile() {
             </p>
           </header>
           <section className="modal-card-body pr-6 pl-6">
-            <Content />
+            <ContentProfile />
           </section>
           <footer className="modal-card-foot is-flex is-justify-content-right">
             <button className="button is-info" onClick={closeModalProfile}>

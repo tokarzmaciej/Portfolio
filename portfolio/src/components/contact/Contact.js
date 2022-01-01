@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bulma/css/bulma.css";
 import { useTranslation } from "react-i18next";
+import ContentContact from "./ContentContact";
 
 function Contact() {
   const [statusModalMe, setStatusModalContact] = useState("modal");
@@ -29,7 +30,9 @@ function Contact() {
               {t("contact")}
             </p>
           </header>
-          <section className="modal-card-body pr-6 pl-6"></section>
+          <section className="modal-card-body pr-6 pl-6 is-size-5">
+            <ContentContact />
+          </section>
           <footer className="modal-card-foot is-flex is-justify-content-right">
             <button className="button is-info" onClick={closeModalContact}>
               {t("exit")}
