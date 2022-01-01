@@ -28,10 +28,10 @@ function Hamburger({ changeLanguage }) {
   };
   const { t } = useTranslation();
   const textStyle = {
-    fontFamily: "Segoe Script",
     color: "white",
     fontSize: "7xl",
     align: "center",
+    style: { fontFamily: "Segoe Script" },
   };
   const profile = (isOpen, onClose) => (
     <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
