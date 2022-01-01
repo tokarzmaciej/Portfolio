@@ -31,7 +31,7 @@ function Hamburger({ changeLanguage }) {
     color: "white",
     fontSize: "7xl",
     align: "center",
-    style: { fontFamily: "Segoe Script" },
+    style: { fontFamily: "Architects Daughter" },
   };
   const profile = (isOpen, onClose) => (
     <ProfileSmallSize isOpen={isOpen} onClose={onClose} />
